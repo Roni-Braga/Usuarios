@@ -13,3 +13,11 @@ html,body{
 	display: none;
 }
 
+#alerta{
+	width: 50rem;
+	height: 3.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}

@@ -64,8 +64,8 @@ function cadastrarUsuario() {
 		}).then((response) => response.json()).then(() =>{
 			const alerta=document.querySelector("#alerta");
 			const paragrafo = document.createElement("div");
-			paragrafo.setAttribute("class","alert alert-success");
-			paragrafo.innerHTML = "Usuário criado com Sucesso";
+			paragrafo.setAttribute("class","alert alert-success w-75 border border-primary mt-5");
+			paragrafo.innerText = "Usuário criado com Sucesso";
 			alerta.appendChild(paragrafo);
 			setInterval(function(){location.reload()},3000);
 			

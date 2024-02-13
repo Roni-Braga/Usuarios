@@ -10,8 +10,8 @@ function pesquisarUsuario() {
 	if(namePesq === ''){
 		const alerta=document.querySelector("#alerta");
 			const paragrafo = document.createElement("div");
-			paragrafo.setAttribute("class","alert alert-success");
-			paragrafo.innerHTML = "O campo de pesquisa não pode ser vazio";
+			paragrafo.setAttribute("class","alert alert-success w-75 border border-primary mt-5");
+			paragrafo.innerText = "O campo de pesquisa não pode ser vazio";
 			alerta.appendChild(paragrafo);
 			
 			setInterval(function(){location.reload(); },3000);
@@ -171,8 +171,8 @@ function editar() {
 		
 		const alerta=document.querySelector("#alerta");
 		const paragrafo = document.createElement("div");
-		paragrafo.setAttribute("class","alert alert-success");
-		paragrafo.innerHTML = "Usuário Alterado com Sucesso";
+		paragrafo.setAttribute("class","alert alert-success w-75 border border-primary mt-5");
+		paragrafo.innerText = "Usuário Alterado com Sucesso";
 		alerta.appendChild(paragrafo);
 		setInterval(function(){location.reload();},3000);
 		
@@ -189,14 +189,14 @@ function deletar(id) {
 	}).then((response) => {
 		if(response.status ==200){const alerta=document.querySelector("#alerta");
 		const paragrafo = document.createElement("div");
-		paragrafo.setAttribute("class","alert alert-success");
-		paragrafo.innerHTML = "Usuário Excluído com Sucesso";
+		paragrafo.setAttribute("class","alert alert-success w-75 border border-primary mt-5");
+		paragrafo.innerText = "Usuário Excluído com Sucesso";
 		alerta.appendChild(paragrafo);
 		setInterval(function(){location.reload();},3000);
 	}else{
 		const paragrafo = document.createElement("div");
-		paragrafo.setAttribute("class","alert alert-success");
-		paragrafo.innerHTML = "Não foi possível excluír o Usuário";
+		paragrafo.setAttribute("class","alert alert-success w-75 border border-primary mt-5");
+		paragrafo.innerText = "Não foi possível excluír o Usuário";
 		alerta.appendChild(paragrafo);
 		setInterval(function(){location.reload();},3000);
 	};
