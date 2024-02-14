@@ -1,0 +1,23 @@
+.icon{
+	cursor: pointer;
+	margin-left: 10px;
+	width: 20%;
+}
+html,body{
+	height: 100vh;
+}
+.span-required{
+	font-size: 12px;
+	margin: 3px 0 0 1px;
+	color: #e63636;
+	display: none;
+}
+
+#alerta{
+	width: 50rem;
+	height: 3.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
