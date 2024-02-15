@@ -1,0 +1,21 @@
+#imagem que será usada
+FROM ubuntu:latest AS build
+#atualizar
+RUN apt-get update
+#instalar o java JDK no container
+RUN apt-get install openjdk-17-jdk -y
+#realizar uma copia dele
+COPY . .
+#instalar o maven no container
+RUN apt-get install maven -y
+#executar o mvn clean para criar o arquivo .jar
+RUN mvn clean install
+#imagem do jdk que sera usada
+FROM openjdk:17-jdk-slim
+#exibindo a porta 8080
+EXPOSE 8080
+#fazendo uma copia de tudo e colocando no caminho abaixo e atribuindo um nome ao arquivo .jar
+COPY --from=build /target/deploy_render-1.0.0.jar usuarios.jar
+#indicando para ele o que eu quero que seja executado
+ENTRYPOINT [ "java","-jar","usuarios.jar" ]
+
